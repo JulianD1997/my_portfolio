@@ -7,36 +7,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <script src="https://kit.fontawesome.com/90a3ea37c8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <img src="img/avatar.svg" alt="Avatar" />
-        <h1>Julian David Casallas Bernal</h1>
-        <p>Desarrollador y estudiante autodidacta</p>
+    <header class ="header">
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item item_1">
+                    <i class="nav_icon fa-solid fa-message"></i> <a href="">Acerca de mí</a>
+                </li>
+                <li class="nav__item">
+                    <i class="nav_icon fa-solid fa-book"></i> <a href="">Estudios</a>
+                </li>
+                <li class="nav__item">
+                    <i class="nav_icon fa-solid fa-gear"></i> <a href="">Habilidades</a>
+                </li>
+                <li class="nav__item">
+                    <i class="nav_icon fa-solid fa-briefcase"></i> <a href="">Proyectos</a>
+                </li>
+                <li class="nav__item">
+                    <i class="nav_icon fa-solid fa-envelope"></i> <a href="">Contáctame</a>
+                </li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li>
-                <i class="fa-solid fa-message"></i> Acerca de mí
-            </li>
-            <li>
-                <i class="fa-solid fa-book"></i> Estudios
-            </li>
-            <li>
-                <i class="fa-solid fa-gear"></i> Habilidades
-            </li>
-            <li>
-                <i class="fa-solid fa-briefcase"></i> Proyectos
-            </li>
-            <li>
-                <i class="fa-solid fa-envelope"></i> Contáctame
-            </li>
-        </ul>
-    </nav>
-    <main>
+    <main class="main">
+        <section class="profile">
+            <img class="profile__avatar" src="img/avatar.svg" alt="Avatar"/>
+            <div class ="profile__container">
+                <p class="profile__title">Julian David Casallas Bernal</p>
+                <spam class="header__description">Desarrollador y estudiante autodidacta</spam>
+            </div>
+        </section>
         <section>
             <h2>Acerca de mi</h2>
             <p>
@@ -75,22 +80,22 @@
             <h2>Habilidades</h2>
             <ul>
                 <li>
-                    <i class="fa-brands fa-python"></i> Python 1 años
+                    <i class="fa-brands fa-python icon"></i> Python 1 años
                 </li>
                 <li>
-                    <i class="fa-brands fa-python"></i> Django 6 meses
+                    <i class="fa-brands fa-python icon"></i> Django 6 meses
                 </li>
                 <li>
-                    <i class="fa-solid fa-database"></i> SQl 1 año
+                    <i class="fa-solid fa-database icon"></i> SQl 1 año
                 </li>
                 <li>
-                    <i class="fa-brands fa-html5"></i> HTML 6 meses
+                    <i class="fa-brands fa-html5 icon"></i> HTML 6 meses
                 </li>
                 <li>
-                    <i class="fa-brands fa-css3-alt"></i> CSS 6 meses
+                    <i class="fa-brands fa-css3-alt icon"></i> CSS 6 meses
                 </li>
                 <li>
-                    <i class="fa-brands fa-js"></i> Javascript 6 meses
+                    <i class="fa-brands fa-js icon"></i> Javascript 6 meses
                 </li>
             </ul>
         </section>
@@ -102,7 +107,7 @@
         </section>
         <section>
                 <h2>Contáctame</h2>
-                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-solid fa-envelope icon"></i>
                 <form method="post">
                     <input type="Text" name="name" placeholder="Nombre">
                     <input type="email" name="email" placeholder="Correo">
