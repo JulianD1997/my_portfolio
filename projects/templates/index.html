@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Portafolio | Julian Casallas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.12/fullpage.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://kit.fontawesome.com/90a3ea37c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul class="nav__list" id="menu">
+                <li class="nav__item active" data-menuanchor="perfil">
+                    <i class="nav__icon fa-solid fa-house"></i> <a href="#perfil">Inicio</a>
+                </li>
+                <li class="nav__item active" data-menuanchor="acerca">
+                    <i class="nav__icon fa-solid fa-message"></i> <a href="#acerca">Acerca de mí</a>
+                </li>
+                <li class="nav__item active" data-menuanchor="estudios">
+                    <i class="nav__icon fa-solid fa-book"></i> <a href="#estudios">Estudios</a>
+                </li>
+                <li class="nav__item active" data-menuanchor="habilidades">
+                    <i class="nav__icon fa-solid fa-gear"></i> <a href="#habilidades">Habilidades</a>
+                </li>
+                <li class="nav__item active" data-menuanchor="proyectos">
+                    <i class="nav__icon fa-solid fa-briefcase"></i> <a href="#proyectos">Proyectos</a>
+                </li>
+                <li class="nav__item active" data-menuanchor="contacto">
+                    <i class="nav__icon fa-solid fa-envelope"></i> <a href="#contacto">Contácto</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main" id="fullpage">
+        <section class="section">
+            <article class="article profile">
+                <img class="profile__avatar" src="../img/avatar.svg" alt="Avatar" />
+                <div class="profile__container">
+                    <h1 class="profile__title">Julian David Casallas Bernal</h1>
+                    <p class="profile__description">Soy <span class="auto__type"></span> </p>
+                </div>
+            </article>
+        </section>
+        <section class="section">
+            <article class="article">
+                <h2 class="subtitle">Acerca de mi</h2>
+                <div class="contenedor__section">
+                    <p class="section__description">
+                        Soy Ingeniero Mecatrónico con conocimiento en Python, Django, SQL, entre otros más.
+                        Me apasiona y me divierte la programación. Busco mejorar día a día aumentando mi conocimiento
+                        por medio de la realización de diferentes cursos o por la investigación de conocimientos. He
+                        obtenido
+                        experiencia en la realización de algunos proyectos básicos realizados en los cursos y otros
+                        ofrecidos por la comunidad. Busco la oportunidad de adentrarme en el ámbito laboral para
+                        adquirir
+                        experiencia
+                        ofreciendo todos mis conocimientos obtenidos y mi capacidad de aprendizaje.
+                    </p>
+                </div>
+            </article>
+        </section>
+        <section class="section">
+            <article class="article">
+                <h2 class="subtitle">Estudios</h2>
+                <ul class='studies__list'>
+                    <li class="list__item">
+                        <spam>Profesional en Ingeniería Mecatrónica</spam> graduado de la Universidad ECCI de Bogotá,
+                        Colombia Egresado en el año 2020.
+                    </li><br>
+                    <li class="list__item,">
+                        <spam>Misión Tic 2022 Programa de Desarrollo</spam>, ofrecido por el gobierno Colombiano,
+                        realizado
+                        en laUniversidad El Bosque en el año 2021.
+                    </li><br>
+                    <li class="list__item,">
+                        <spam>Diplomatura en Python</spam> realizada en la Universidad nacional de la plata de Buenos
+                        Aires,
+                        Argentina Cursando.
+                    </li><br>
+                    <li class="list__item,">
+                        <spam>Programa codo a codo - Fullstack Python</spam>, ofrecido por el gobierno Argentino
+                        Cursando.
+                    </li>
+                    </div>
+            </article>
+        </section>
+        <section class="section">
+            <article class="article">
+                <h2 class="subtitle">Habilidades</h2>
+                <div class="contenedor__section">
+                    <ul>
+                        <li class="skill"><i class="fa-brands fa-python"></i> Python 1 año</li>
+                        <li class="skill"><i class="fa-brands fa-python"></i> Django 6 meses</li>
+                        <li class="skill"><i class="fa-solid fa-database"></i> SQL 1 año</li>
+                        <li class="skill"><i class="fa-brands fa-html5"></i> HTML 6 meses</li>
+                        <li class="skill"><i class="fa-brands fa-css3-alt"></i> CSS 6 meses</li>
+                        <li class="skill"><i class="fa-brands fa-js"></i> Javascript 6 meses</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <section class="section">
+            <article class="article">
+                <h2 class="subtitle">Proyectos</h2>
+                <div class="contenedor__section">
+                    <p class="section__description">En Desarrollo </p>
+                </div>
+            </article>
+        </section>
+        <section class="section">
+            <article class='article'>
+                <h2 class="subtitle">Contáctame</h2>
+                <div class="container__section">
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <form class="form" method="post" autocomplete="off">
+                        <div class="form__group">
+                            <input class="form__input" type="Text" name="name" id="name">
+                            <label class="form__label" for="name">Nombre</label>
+                        </div>
+                        <div class="form__group">
+                            <input class="form__input" type="email" name="email" id="email">
+                            <label class="form__label" for="email">Correo</label>
+                        </div>
+                        <div class="form__group">
+                            <input class="form__input" type="text" name="subject" id="subject">
+                            <label class="form__label" for="subject">Asunto</label>
+                        </div>
+                        <div class="form__group">
+                            <textarea class="form__input text__area" name="" id=""></textarea>
+                            <label class="form__label" for="message">Mensaje</label>
+                        </div>
+                        <button class="form__input button" name="enviar">Enviar</button>
+                    </form>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.12/fullpage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="../stactic/js/portfolio.js"></script>
+</body>
+
+</html>
