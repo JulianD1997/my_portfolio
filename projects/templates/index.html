@@ -51,7 +51,7 @@
         <section class="section">
             <article class="article">
                 <h2 class="subtitle">Acerca de mi</h2>
-                <div class="contenedor__section">
+                <div class="container__section">
                     <p class="section__description">
                         Soy Ingeniero Mecatrónico con conocimiento en Python, Django, SQL, entre otros más.
                         Me apasiona y me divierte la programación. Busco mejorar día a día aumentando mi conocimiento
@@ -69,39 +69,50 @@
         <section class="section">
             <article class="article">
                 <h2 class="subtitle">Estudios</h2>
-                <ul class='studies__list'>
-                    <li class="list__item">
-                        <spam>Profesional en Ingeniería Mecatrónica</spam> graduado de la Universidad ECCI de Bogotá,
-                        Colombia Egresado en el año 2020.
-                    </li><br>
-                    <li class="list__item,">
-                        <spam>Misión Tic 2022 Programa de Desarrollo</spam>, ofrecido por el gobierno Colombiano,
-                        realizado
-                        en laUniversidad El Bosque en el año 2021.
-                    </li><br>
-                    <li class="list__item,">
-                        <spam>Diplomatura en Python</spam> realizada en la Universidad nacional de la plata de Buenos
-                        Aires,
-                        Argentina Cursando.
-                    </li><br>
-                    <li class="list__item,">
-                        <spam>Programa codo a codo - Fullstack Python</spam>, ofrecido por el gobierno Argentino
-                        Cursando.
-                    </li>
-                    </div>
+                <div class="container__section">
+                    <ul class='studies__list'>
+                        <li class="list__item">
+                            <span class="content">
+                                <span>Profesional en Ingeniería Mecatrónica</span> graduado de la Universidad ECCI de
+                                Bogotá,
+                                Colombia Egresado en el año 2020.
+                            </span>
+                        </li>
+                        <li class="list__item">
+                            <span class="content">
+                                <span>Misión Tic 2022 Programa de Desarrollo</span>, ofrecido por el gobierno Colombiano,
+                                realizado
+                                en la Universidad El Bosque en el año 2021.
+                            </span>
+                        </li>
+                        <li class="list__item">
+                            <span class="content">
+                                <span>Diplomatura en Python</span> realizada en la Universidad nacional de la plata de
+                                Buenos
+                                Aires,
+                                Argentina Cursando.
+                            </span>
+                        </li>
+                        <li class="list__item">
+                            <span class="content">
+                                <span>Programa codo a codo - Fullstack Python</span>, ofrecido por el gobierno Argentino
+                                Cursando.
+                            </span>
+                        </li>
+                </div>
             </article>
         </section>
         <section class="section">
             <article class="article">
                 <h2 class="subtitle">Habilidades</h2>
-                <div class="contenedor__section">
-                    <ul>
-                        <li class="skill"><i class="fa-brands fa-python"></i> Python 1 año</li>
-                        <li class="skill"><i class="fa-brands fa-python"></i> Django 6 meses</li>
-                        <li class="skill"><i class="fa-solid fa-database"></i> SQL 1 año</li>
-                        <li class="skill"><i class="fa-brands fa-html5"></i> HTML 6 meses</li>
-                        <li class="skill"><i class="fa-brands fa-css3-alt"></i> CSS 6 meses</li>
-                        <li class="skill"><i class="fa-brands fa-js"></i> Javascript 6 meses</li>
+                <div class="container__section">
+                    <ul class="skills__list">
+                        <li class="skill"><img src="../img/python.svg" alt="python"> Python 1 año</li>
+                        <li class="skill"><img src="../img/python.svg" alt="python"> Django 6 meses</li>
+                        <li class="skill"><img src="../img/mysql.svg" alt="sqlite"> SQL 1 año</li>
+                        <li class="skill"><img src="../img/HTML.svg" alt="html"> HTML 6 meses</li>
+                        <li class="skill"><img src="../img/CSS.svg" alt="css"> CSS 6 meses</li>
+                        <li class="skill"><img src="../img/Javascript.svg" alt="javascript"> Javascript 6 meses</li>
                     </ul>
                 </div>
             </article>
@@ -110,7 +121,15 @@
             <article class="article">
                 <h2 class="subtitle">Proyectos</h2>
                 <div class="contenedor__section">
-                    <p class="section__description">En Desarrollo </p>
+                    <button role="button" id="izquierda" class="button__proyect"><i class="fa-solid fa-angle-left"></i></button>
+                    <div class="carrusel__container">
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>
+                        <div class="card"></div>                        
+                    </div>
+                    <button role="button" id="derecha" class="button__proyect"><i class="fa-solid fa-angle-right"></i></button>
                 </div>
             </article>
         </section>
@@ -119,7 +138,7 @@
                 <h2 class="subtitle">Contáctame</h2>
                 <div class="container__section">
                     <i class="fa-solid fa-envelope icon"></i>
-                    <form class="form" method="post" autocomplete="off">
+                    <form class="form" method="post" autocomplete="off" id="form">
                         <div class="form__group">
                             <input class="form__input" type="Text" name="name" id="name">
                             <label class="form__label" for="name">Nombre</label>
@@ -133,10 +152,10 @@
                             <label class="form__label" for="subject">Asunto</label>
                         </div>
                         <div class="form__group">
-                            <textarea class="form__input text__area" name="" id=""></textarea>
+                            <textarea class="form__input text__area" name="text__area" id="text__area"></textarea>
                             <label class="form__label" for="message">Mensaje</label>
                         </div>
-                        <button class="form__input button" name="enviar">Enviar</button>
+                        <button type="submit" class="form__input button">Enviar</button>
                     </form>
                 </div>
             </article>
