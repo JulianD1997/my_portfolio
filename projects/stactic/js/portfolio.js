@@ -33,10 +33,13 @@ const btnSiguiente = document.getElementById('next')
 const btnAnterior = document.getElementById('prev')
 let totalCards = cards.length-1
 let inicio = 0
-console.log(totalCards)
+cards[0].classList.add('scale_card')
 function carrusel(i = 0){
+    cards.forEach((card)=>{
+        card.classList.remove('scale_card')
+    })
     carruselContainer.style.transform = `translateX(${-i*440}px)`;
-    cards[i].setAttribute()
+    cards[i].classList.add('scale_card')
 }
 cards.forEach((card,i) => {
     card.addEventListener('click', () =>{

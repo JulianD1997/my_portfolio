@@ -71,7 +71,11 @@ body{
     font-size: 500;
 }
 /* estilo articulos del portfolio */
+.fp-overflow{
+    height: 100%;
+}
 .article{
+    overflow: hidden;
     height: 100%;
     padding: 0px 80px;
     position: relative;
@@ -81,9 +85,6 @@ body{
     align-items: center;
     justify-content: center;
 }
-.fp-overflow{
-    height: 100%;
-}
 /*perfil inicio*/
 .profile{
     padding: 0px 30px;
@@ -92,7 +93,7 @@ body{
 .profile__avatar{
     position: relative;
     z-index: 1;
-    width: 70%;
+    width: 50%;
 }
 .profile__container{
     position: relative;
@@ -142,15 +143,49 @@ body{
         3px 2px 2px rgba(128, 128, 128, 0.221),
         3px 1px 3px rgba(11, 255, 3, 0.386);
 }
-.container__section{
+.article__container{
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 100%;
 }
-.section__description{
+/* acerca */
+.intereses{
+    align-items: flex-start;
+}
+.article__description{
+    padding-top: 140px;
     text-align: center;
 }
+.intereses >h2{
+    top: 45px;
+}
+.avion{
+    position: absolute;
+    background-color: transparent;
+    height: 120px;
+    width: 120px;
+    filter: invert(100%);
+    top: 80%;
+    left: 10%;
+    animation: movePlane 10s cubic-bezier(.70,-0.50,.80,0.5) infinite /* direction fill-mode */;
+}
+@keyframes movePlane {
+    50%{
+        top: 50%;
+        transform: translateX(70vw);
+        transform: translateX();
+    }
+    50%{
+        top:85%;
+    }
+    100%{
+    }
+}
 /* estilo estudios */
+
 .studies__list{
     list-style-type: square;
     color: rgb(247,37,133);
@@ -162,7 +197,9 @@ body{
 .content >span{
     font-weight: 700;
 }
+
 /* Habilidades*/
+
 .skills__list{
     margin-top: 150px;
 }
@@ -185,7 +222,8 @@ body{
 }
 
 /* estilo proyectos */
-.contenedor__section{
+
+.containerProyecto{
     overflow-x: hidden;
     width: 100%;
     min-height: 60%;
@@ -206,19 +244,39 @@ body{
     flex-wrap: nowrap;
     gap: 40px;
     left: 880px;
+    transition: transform 0.5s ease-out, box-shadow 0.2s ease;
 }
 .card{
+    opacity: 0.7;
+    overflow: hidden;;
     cursor: pointer;
     height: 500px;
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
     border-radius: 20px;
     border-radius: 29px;
+    display: flex;
     background-color: rgb(28, 28, 28);
     box-shadow:  
         -6px 6px 12px rgb(16, 16, 16),
         6px -6px 12px rgb(40, 40, 40);
-    transition: transform 0.3s ease, background-color 0.2s ease,box-shadow 0.3s ease;
+    transform: scale(0.90);
+    transition: transform 0.5s ease, box-shadow 0.2s ease;
+}
+.card .card__content{
+    flex: 0 1 100%;
+}
+.card .card__tool{
+    position: relative;
+    z-index: 100;
+    background-color: black;
+    flex: 0 0 auto;
+    width: 64px;
+    transition: width 300ms;
+}
+.scale_card{
+    transform: scale(1.15);
+    opacity: 1;
 }
 .card:hover{
     background: rgb(29, 29, 29);
@@ -262,6 +320,75 @@ body{
 .button__proyect:hover{
     transform: scale(1.5);
     animation: none;
+}
+/*estilo card proyectos*/
+.card__tool{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px 10px;
+}
+.card__link{
+    color: white;
+    margin-bottom: 20px;
+}
+.card__link:hover{
+    color: rgb(1,68,214);
+    opacity: 0.8;
+}
+.card__project{
+    position: relative;
+}
+.card__img{
+    background-color: #101010;
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 100ms ease-in, transform 500ms ease-in;
+}
+.card__content{
+    background-color: #1010103a;
+    border-radius: 50%;
+    padding: 30px;
+    width:360px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-150%);
+    text-align: center;
+    font-size: 1.4rem;
+}
+.card__title{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: rgb(6, 231, 10)
+}
+.card__description{
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    text-align: center;
+    text-shadow: 3px 2px 50px rgba(0, 0, 0, 0.577),
+    1px 1px 50px rgba(0, 0, 0, 0.748),
+    2px 2px 40px rgba(0, 0, 0, 0.838),
+    1px 1px 230px rgba(0, 0, 0, 0.614);
+}
+.card.scale_card:hover .card__img{
+    transform: scale(1.5);
+    opacity: 0.2;
+    object-fit: cover;
+}
+.card.scale_card:hover .card__content{
+    animation: text-translate 500ms cubic-bezier(.88,1.7,.64,.81) forwards;
+}
+@keyframes text-translate{
+    100%{
+        transform:translate(-50%,-50%)
+    }
+    
 }
 /*estilo formulario de contacto*/
 .form{
@@ -340,27 +467,3 @@ body{
 .fp-watermark{
     display: none;
 }
-
-/*
-
-
-.skill{
-    text-decoration: none;
-    text-align: center;
-    font-size: 1.8em;
-    line-height: 1.5em;
-    list-style-type: none;
-    
-}
-.skill>i{
-    color: rgb(55, 255, 0);
-    font-size:1.5em;
-    margin-right: 30px;
-}
-.section:last-child{
-    text-align: center;
-    align-content: center;
-    min-width: 95vw;
-    min-height: 100vh;
-}
- */
