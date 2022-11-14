@@ -118,3 +118,20 @@ const inputs = document.querySelectorAll('.form__input')
 inputs.forEach(input => {
     input.addEventListener('blur', validarInputs)
 })
+
+//barra de navegacion//
+let burger = document.getElementById('burger')
+let menu = document.getElementById('menu')
+burger.addEventListener('click',()=>{
+    console.log('aca')
+    if(burger.classList.contains('activo')){
+        burger.classList.remove('activo')
+        burger.classList.add('no_activo')
+        menu.classList.remove('media')
+    }
+    else{
+        burger.classList.add('activo')
+        burger.classList.remove('no_activo')
+        menu.classList.add('media')
+    }
+})
