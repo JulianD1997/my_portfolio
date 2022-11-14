@@ -135,3 +135,17 @@ burger.addEventListener('click',()=>{
         menu.classList.add('media')
     }
 })
+
+//boton links
+
+let btnLinks = document.getElementById('boton__link')
+let redes = document.getElementById('redes')
+btnLinks.addEventListener('click',()=>{
+    console.log('aca')
+    if(redes.classList.contains('activo_redes')){
+        redes.classList.remove('activo_redes')
+    }
+    else{
+        redes.classList.add('activo_redes')
+    }
+})
