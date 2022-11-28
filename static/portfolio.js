@@ -31,7 +31,7 @@ const carruselContainer = document.getElementById('carrusel')
 const cards = Array.from(document.getElementsByClassName('card'))
 const btnSiguiente = document.getElementById('next')
 const btnAnterior = document.getElementById('prev')
-let totalCards = cards.length-1
+let totalCards = cards.length - 1
 let inicio = 0
 //media query carrusel max 850px
 let screen_550 = window.matchMedia("(max-width: 550px)")
@@ -39,39 +39,39 @@ let screen_850 = window.matchMedia("(max-width: 850px)")
 let screen_1149 = window.matchMedia("(max-width: 1149px)")
 
 cards[0].classList.add('scale_card')
-function carrusel(i = 0){
-    cards.forEach((card)=>{
+function carrusel(i = 0) {
+    cards.forEach((card) => {
         card.classList.remove('scale_card')
     })
-    if(screen_550.matches){
-        carruselContainer.style.transform = `translateX(${-i*235}px)`;
+    if (screen_550.matches) {
+        carruselContainer.style.transform = `translateX(${-i * 235}px)`;
     }
-    else if (screen_850.matches){
-        carruselContainer.style.transform = `translateX(${-i*330}px)`;
+    else if (screen_850.matches) {
+        carruselContainer.style.transform = `translateX(${-i * 330}px)`;
     }
-    else if (screen_1149.matches){
-        carruselContainer.style.transform = `translateX(${-i*350}px)`;
+    else if (screen_1149.matches) {
+        carruselContainer.style.transform = `translateX(${-i * 350}px)`;
     }
-    else{
-        carruselContainer.style.transform = `translateX(${-i*440}px)`;
-        
+    else {
+        carruselContainer.style.transform = `translateX(${-i * 440}px)`;
+
     }
     cards[i].classList.add('scale_card')
 }
-cards.forEach((card,i) => {
-    card.addEventListener('click', () =>{
-        id=i
+cards.forEach((card, i) => {
+    card.addEventListener('click', () => {
+        id = i
         carrusel(i)
     })
 })
-btnAnterior.addEventListener('click',()=>{
-    if(inicio > 0){
+btnAnterior.addEventListener('click', () => {
+    if (inicio > 0) {
         inicio--
         carrusel(inicio)
     }
 })
-btnSiguiente.addEventListener('click',()=>{
-    if(inicio < totalCards){
+btnSiguiente.addEventListener('click', () => {
+    if (inicio < totalCards) {
         inicio++
         carrusel(inicio)
     }
@@ -122,14 +122,13 @@ inputs.forEach(input => {
 //barra de navegacion//
 let burger = document.getElementById('burger')
 let menu = document.getElementById('menu')
-burger.addEventListener('click',()=>{
-    console.log('aca')
-    if(burger.classList.contains('activo')){
+burger.addEventListener('click', () => {
+    if (burger.classList.contains('activo')) {
         burger.classList.remove('activo')
         burger.classList.add('no_activo')
         menu.classList.remove('media')
     }
-    else{
+    else {
         burger.classList.add('activo')
         burger.classList.remove('no_activo')
         menu.classList.add('media')
@@ -140,12 +139,12 @@ burger.addEventListener('click',()=>{
 
 let btnLinks = document.getElementById('boton__link')
 let redes = document.getElementById('redes')
-btnLinks.addEventListener('click',()=>{
-    console.log('aca')
-    if(redes.classList.contains('activo_redes')){
+btnLinks.addEventListener('click', () => {
+
+    if (redes.classList.contains('activo_redes')) {
         redes.classList.remove('activo_redes')
     }
-    else{
+    else {
         redes.classList.add('activo_redes')
     }
 })
