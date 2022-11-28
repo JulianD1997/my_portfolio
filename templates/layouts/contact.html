@@ -2,7 +2,11 @@
 <section class="section">
     <article class='article'>
         <h2 class="subtitle">Contáctame</h2>
+        {% if name %}
+            <p class='contacto__aviso'> Gracias <span>{{name.upper}}!</span> Leere tu mensaje </p>
+        {% else %}
         {% include 'layouts/partials/form.html' %}
+        {% endif %}
         <i class="boton__link fa-solid fa-link" id="boton__link"></i>
         <div class="redes" id="redes">
             <ul class="toolkit">

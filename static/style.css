@@ -708,7 +708,7 @@ nav {
 }
 
 .download {
-    color: rgb(255, 191, 0);
+    color: rgb(60, 0, 255);
     text-decoration: none;
     padding: 10px;
     background: #1c1c1c;
@@ -716,6 +716,13 @@ nav {
         6px 6px 12px #101010,
         -6px -6px 12px #282828;
     border-radius: 28px;
+}
+p.contacto__aviso{
+    font-size: 2rem;
+}
+p.contacto__aviso > span{
+    color: rgb(255, 191, 0);
+    font-weight: 700;
 }
 
 /* marca de agua */
